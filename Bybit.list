@@ -1,0 +1,29 @@
+# Bybit 分流规则（QuantumultX 格式）
+# 来源：wuleaves/bybit-loon-rules（基于 MetaCubeX Bybit 域名列表整理，2026-10 更新）
+# 转换：DOMAIN→HOST、DOMAIN-SUFFIX→HOST-SUFFIX，策略在圈X添加时选择
+
+HOST,bybit-exchange.github.io
+HOST,bybit.ada.support
+HOST-SUFFIX,bybit.com
+HOST-SUFFIX,bycsi.com
+HOST-SUFFIX,bytick.com
+HOST-SUFFIX,byapis.com
+HOST-SUFFIX,bycbe.com
+HOST-SUFFIX,bymj.io
+HOST-SUFFIX,byabcde.com
+HOST-SUFFIX,byapps.net
+HOST-SUFFIX,byd3c3.com
+HOST-SUFFIX,bybit.biz
+HOST-SUFFIX,bybdc6.com
+HOST-SUFFIX,bybit-global.com
+HOST-SUFFIX,bybit.cloud
+HOST-SUFFIX,bybitglobal.com
+HOST-SUFFIX,bybit.global
+HOST-SUFFIX,bybit.eu
+HOST-SUFFIX,bybit.tr
+HOST-SUFFIX,bybit.kz
+HOST-SUFFIX,bybitgeorgia.ge
+HOST-SUFFIX,bybit.ae
+HOST-SUFFIX,bybit.id
+HOST-SUFFIX,byffbb.com
+HOST,monitor-frontend-collector.a.bybit-aws.com
