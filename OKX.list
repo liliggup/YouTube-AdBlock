@@ -1,0 +1,21 @@
+# NAME: OKX
+
+# AUTHOR: blackmatrix7
+
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+
+# UPDATED: 2024-01-08 16:03:00
+
+# HOST-SUFFIX: 3
+
+# TOTAL: 3
+
+HOST-SUFFIX,okex.com,OKX
+
+HOST-SUFFIX,oklink.com,OKX
+
+HOST-SUFFIX,okx.com,OKX
+
+# 以下两条为本地补充：OKX 的 CDN 域名不在原名单内，不加会掉到 FINAL 兜底
+HOST-SUFFIX,okx.com.cdn.cloudflare.net,OKX
+HOST,d1w1p0smpsoh5j.cloudfront.net,OKX
