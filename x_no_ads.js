@@ -2,7 +2,8 @@
 // 原理:X 把广告混进时间线数据一起返回,广告条目带明确的推广标记
 // (entryId 以 promoted 开头,或条目内带 promotedMetadata 字段)。
 // 本脚本递归扫描返回的 JSON,摘掉带推广标记的条目;
-// 正文不含 promoted 字样时直接放行,解析出错时原样放行,绝不影响正常使用。
+// 响应过大、正文不含 promoted 字样、或解析出错时,一律原样放行,绝不影响正常使用。
+// v2:配合 XAds.conf 只处理时间线/搜索接口,不碰推文详情,避免影响视频加载。
 
 function isAdEntry(obj) {
   if (!obj || typeof obj !== "object" || Array.isArray(obj)) return false;
@@ -38,7 +39,7 @@ function clean(node) {
 
 try {
   var body = $response.body;
-  if (!body || (body.indexOf("promoted") === -1 && body.indexOf("Promoted") === -1)) {
+  if (!body || body.length > 2000000 || (body.indexOf("promoted") === -1 && body.indexOf("Promoted") === -1)) {
     $done({});
   } else {
     var data = JSON.parse(body);
