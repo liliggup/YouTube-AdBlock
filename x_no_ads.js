@@ -6,7 +6,7 @@
 
 function isAdEntry(obj) {
   if (!obj || typeof obj !== "object" || Array.isArray(obj)) return false;
-  if (typeof obj.entryId === "string" && /^(promoted|ad|sponsored)[-_]/.test(obj.entryId)) return true;
+  if (typeof obj.entryId === "string" && /^(promoted|ad|sponsored)[-_]/i.test(obj.entryId)) return true;
   if (obj.promotedMetadata || obj.promoted_metadata || obj.adMetadata || obj.ad_metadata) return true;
   var ic = null;
   if (obj.content && obj.content.itemContent) ic = obj.content.itemContent;
